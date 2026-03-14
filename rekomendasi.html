@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rekomendasi Cafe Mahasiswa</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .judulintro {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .fontdeskripsi {
+            font-size: 17px;
+        }
+
+        .toast-wrapper {
+            position: fixed;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="toast-wrapper">
+        <div class="toast shadow-lg border-0" id="toastInfo" data-delay="4000">
+            <div class="toast-header bg-success text-white">
+                <span style="font-size:20px;margin-right:8px;">☕</span>
+                <strong class="mr-auto">Rekomendasi Cafe</strong>
+                <small>baru saja</small>
+                <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast">&times;</button>
+            </div>
+
+            <div class="toast-body">
+                Berikut adalah <b>3 cafe favorit mahasiswa</b> untuk nongkrong dan mengerjakan tugas.
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="display-4">Rekomendasi Tempat Nongkrong</h1>
+            <p class="lead">Tempat santai favorit mahasiswa untuk belajar, diskusi, dan menikmati kopi.</p>
+            <hr class="my-3">
+            <button class="btn btn-success btn-lg" onclick="showToast()">Lihat Rekomendasi Cafe</button>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p class="judulintro">Cafe Favorit Mahasiswa</p>
+            </div>
+        </div>
+
+        <div class="row border p-3">
+            <div class="col-4">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb"
+                    class="img-fluid rounded">
+            </div>
+
+            <div class="col-8">
+                <h4>Tetra</h4>
+                <p class="fontdeskripsi">
+                    Tetra Cafe memiliki suasana yang nyaman dan tenang sehingga cocok untuk mahasiswa yang ingin
+                    belajar atau mengerjakan tugas bersama teman.
+                </p>
+            </div>
+        </div>
+
+        <div class="row border p-3 mt-3">
+            <div class="col-4">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24"
+                    class="img-fluid rounded">
+            </div>
+
+            <div class="col-8">
+                <h4>Forthis</h4>
+                <p class="fontdeskripsi">
+                    Forthis Cafe memiliki desain interior modern dengan banyak spot foto menarik.
+                    Tempat ini sering menjadi pilihan mahasiswa untuk berkumpul dan berdiskusi.
+                </p>
+            </div>
+        </div>
+
+        <div class="row border p-3 mt-3">
+            <div class="col-4">
+                <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814"
+                    class="img-fluid rounded">
+            </div>
+
+            <div class="col-8">
+                <h4>Leftside</h4>
+                <p class="fontdeskripsi">
+                    Leftside Cafe menawarkan suasana santai dengan berbagai pilihan kopi.
+                    Banyak mahasiswa datang ke sini untuk mengerjakan tugas atau sekadar bersantai.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showToast() {
+            $('#toastInfo').toast({
+                animation: true,
+                autohide: true,
+                delay: 4000
+            });
+
+            $('#toastInfo').toast('show');
+        }
+    </script>
+
+</body>
+
+</html>
